@@ -24,11 +24,11 @@ function App() {
           <Table />
         </div>
         <div className="column">
-          <h1>Scores</h1>
-          <h1 style={{ marginTop: "3rem" }}>P1(O)</h1>
-          <h1>{Checking().playerOneScore} Pts</h1>
+          <h1>SCORES</h1>
+          <h1 style={{ marginTop: "4rem" }}>P1(O)</h1>
+          <h2>{Checking().playerOneScore} pts</h2>
           <h1 style={{ marginTop: "7rem" }}>P2(X)</h1>
-          <h1>{Checking().playerTwoScore} Pts</h1>
+          <h2>{Checking().playerTwoScore} pts</h2>
         </div>
       </div>
     </div>

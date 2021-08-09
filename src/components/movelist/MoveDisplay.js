@@ -6,8 +6,8 @@ const MoveDisplay = ({ move }) => {
   return (
     <div>
       <h5 style={{ color: "grey" }}>
-        Move{move.moveNumber} by P{move.player} put {move.value} at BOX#
-        {move.boxId}
+        #{move.moveNumber}: Player{move.player} occupied BOX{move.boxId} with{" "}
+        {move.value}
       </h5>
     </div>
   );

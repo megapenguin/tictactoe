@@ -6,7 +6,7 @@ const MovelList = () => {
   const { state } = useContext(AppContext);
   return (
     <div>
-      <h1>Move List </h1>
+      <h1>MOVES </h1>
 
       {state.moveHolder.length > 0
         ? state.moveHolder.map((move) => (

@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Major Mono Display", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,15 +30,25 @@ code {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 350px;
   overflow: auto;
   min-height: 300px;
+  border: 2px solid rgb(10, 10, 10);
+  border-radius: 10px;
+  margin: auto;
+}
+.simple-container {
+  overflow: auto;
+
   border: 5px solid rgb(10, 10, 10);
   border-radius: 10px;
+  margin: auto;
 }
 
 h1 {
+  font-family: "Major Mono Display", monospace;
   text-align: center;
+  font-weight: bold;
 }
 p {
   text-align: center;

@@ -49,6 +49,7 @@ export const Table = () => {
   const [count, setCount] = useState(1);
   const [match, setMatch] = useState(1);
   const [play, setPlay] = useState(false);
+  const finalScore = 2;
 
   const clickedBox = (id) => {
     let newList = boxId.filter((box) => box != id);
@@ -63,9 +64,13 @@ export const Table = () => {
     let updatedValue;
 
     try {
-      if (Checking().playerOneScore !== 2 && Checking().playerTwoScore !== 2) {
+      if (
+        Checking().playerOneScore !== finalScore &&
+        Checking().playerTwoScore !== finalScore
+      ) {
         console.log(
-          Checking().playerOneScore != 2 || Checking().playerTwoScore != 2
+          Checking().playerOneScore != finalScore ||
+            Checking().playerTwoScore != finalScore
         );
         boxId.map((box) => {
           if (box == id) {
@@ -131,7 +136,7 @@ export const Table = () => {
     <div>
       <h1>TIC TAC TOE</h1>
       <h4>Match #{match}</h4>
-      <div className="container">
+      <div className="container" style={{ background: "grey" }}>
         <table>
           <tr>
             <td id="1" onClick={(e) => onClick(e.target.id)}>
@@ -174,11 +179,11 @@ export const Table = () => {
       </div>
       <div>
         {Checking().status === true &&
-        Checking().playerOneScore !== 2 &&
-        Checking().playerTwoScore !== 2 ? (
+        Checking().playerOneScore !== finalScore &&
+        Checking().playerTwoScore !== finalScore ? (
           <button
             className="btn btn-block"
-            style={{ background: "green" }}
+            style={{ background: "green", marginTop: "2rem" }}
             onClick={() => playAgain()}
           >
             Play Again
@@ -188,19 +193,21 @@ export const Table = () => {
         )}
         {console.log(
           "Rematch?",
-          Checking().playerOneScore === 2 || Checking().playerTwoScore === 2
+          Checking().playerOneScore === finalScore ||
+            Checking().playerTwoScore === finalScore
         )}
-        {Checking().playerOneScore == 2 ? (
+        {Checking().playerOneScore == finalScore ? (
           <h1 style={{ color: "blue" }}>Player One Wins!</h1>
         ) : (
           ""
         )}
-        {Checking().playerTwoScore == 2 ? (
+        {Checking().playerTwoScore == finalScore ? (
           <h1 style={{ color: "blue" }}>Player Two Wins!</h1>
         ) : (
           ""
         )}
-        {Checking().playerOneScore === 2 || Checking().playerTwoScore === 3 ? (
+        {Checking().playerOneScore === finalScore ||
+        Checking().playerTwoScore === finalScore ? (
           <button
             className="btn btn-block"
             style={{ background: "red" }}
